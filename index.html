@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="dist/css/bundle.min.css" rel="stylesheet">
+    <title>Darciarz.pl</title>
+</head>
+<body>
+    <header id="HeaderWrap">
+        <hgroup class="logo"><img src="images/logo.png" alt="Darciarz.pl" class="logo__image"></hgroup>
+        <hgroup class="toolbar-ext">
+            <div class="toolbar-ext__component">
+                <p class="component-name">Language</p>
+                <a href="/api/user/settings/language/pl_PL" class="component-option"><img src="images/pl_PL.png" alt="pl_PL" class="component-option__lang-flag"></a>
+                <a href="/api/user/settings/language/en_US" class="component-option"><img src="images/en_US.png" alt="en_US" class="component-option__lang-flag"></a>
+            </div>
+            <div class="toolbar-ext__component">
+                <p class="component-name">Theme</p>
+                <a href="/api/user/settings/theme/light" class="component-option"><img src="images/theme_light.png" alt="light" class="component-option__theme-color"></a>
+                <a href="/api/user/settings/theme/blue" class="component-option"><img src="images/theme_blue.png" alt="blue" class="component-option__theme-color"></a>
+                <a href="/api/user/settings/theme/red" class="component-option"><img src="images/theme_red.png" alt="red" class="component-option__theme-color"></a>
+            </div>
+            <div class="toolbar-ext__component">
+                <p class="component-name">Report</p>
+                <a href="/report/bug" class="component-option"><i class="component-option__bug material-icons">bug_report</i></a>
+            </div>
+        </hgroup>
+    </header>
+
+    <div id="Wrappers">
+
+        <div id="LeftPanel">
+            <div class="section">
+                <h2 class="section__title">Nawigacja</h2>
+                <nav id="MenuWrap">
+                    <ol class="menu">
+                        <li class="menu__item menu__item--visited">
+
+                            <div class="item-label">
+                                <i class="item-label__icon material-icons">home</i>
+                                <a href="http://localhost/home" class="item-label__link">Strona główna</a>
+                            </div>
+                        </li>
+
+                        <li class="menu__item">
+                            <div class="item-label">
+                                <i class="item-label__icon material-icons">event</i>
+                                <a href="" class="item-label__link">Wydarzenia</a>
+                                <i class="item-label__expand material-icons">expand_more</i>
+                            </div>
+                            <ul class="submenu">
+                                <li class="subitem"><a href="" class="subitem__link">Lista wydarzeń</a></li>
+                                <li class="subitem"><a href="" class="subitem__link">Dodaj wydarzenie</a></li>
+                                <li class="subitem"><a href="" class="subitem__link">Moje wydarzenia</a></li>
+                                <li class="subitem"><a href="" class="subitem__link">W mojej okolicy</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu__item">
+                            <div class="item-label">
+                                <i class="item-label__icon material-icons">place</i>
+                                <a href="" class="item-label__link">Miejsca</a>
+                                <i class="item-label__expand material-icons">expand_more</i>
+                            </div>
+                            <ul class="submenu">
+                                    <li class="subitem"><a href="" class="subitem__link">Lista miejsc</a></li>
+                                    <li class="subitem"><a href="" class="subitem__link">Dodaj miejsce</a></li>
+                                    <li class="subitem"><a href="" class="subitem__link">Moje miejsca</a></li>
+                                    <li class="subitem"><a href="" class="subitem__link">W mojej okolicy</a></li>
+                                </ul>
+                        </li>
+
+                        <li class="menu__item">
+                            <div class="item-label">
+                                <i class="item-label__icon material-icons">info</i>
+                                <a href="" class="item-label__link">Informacje</a>
+                            </div>
+                        </li>
+
+                        <li class="menu__item">
+                            <div class="item-label">
+                                <i class="item-label__icon material-icons">contact_mail</i>
+                                <a href="" class="item-label__link">Kontakt</a>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="section">
+                <h2 class="section__title">Współpraca</h2>
+                <ol id="Partnership">
+                    <li class="partner">
+                        <a href="http://dartworld.pl" class="partner__link">
+                        <img src="images/partnership/dartworld.png" alt="dartworld.pl" class="partner__image"></a>
+                    </li>
+                    <li class="partner">
+                        <a href="http://darttown.pl" class="partner__link">
+                        <img src="images/partnership/darttown.png" alt="darttown.pl" class="partner__image"></a>
+                    </li>
+                    <li class="partner">
+                        <a href="http://dart.com.pl" class="partner__link">
+                        <img src="images/partnership/dart.png" alt="dart.com.pl" class="partner__image"></a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <main id="MainWrap">
+            <nav id="NavPath">
+                <i class="path-icon material-icons">event</i>
+                <ul>
+                    <li class="path-item"><a href="" class="path-item__link">Wydarzenia</a></li>
+                    <li class="path-item"><a href="" class="path-item__link">Lista wydarzeń</a></li>
+                    <li class="path-item"><a href="" class="path-item__link">Podkategoria</a></li>
+                </ul>
+
+            </nav>
+            <section class="main_section">
+                <div class="scrollbar">
+                    <div class="scrollbar__slider"></div>
+                </div>
+                <div class="viewBox">
+                    <div class="section-cluster section-cluster--size-8x4">
+                        <article class="section-module section-module--size-4x4">
+                            <header class="section-module__title-bar">
+                                <h3 class="module-name">Informacje</h3>
+                                <i class="more-button material-icons">more_horiz</i>
+                            </header>
+                            <div class="section-module__content"></div>
+                        </article>
+                        <div class="section-cluster section-cluster--size-4x4">
+                            <article class="section-module section-module--size-4x2">
+                                <header class="section-module__title-bar">
+                                    <h3 class="module-name">Aktualności</h3>
+                                    <i class="more-button material-icons">more_horiz</i>
+                                </header>
+                                <div class="section-module__content"></div>
+                            </article>
+                            <div class="section-cluster section-cluster--size-4x2">
+                                <article class="section-module section-module--size-2x2">
+                                    <header class="section-module__title-bar">
+                                        <h3 class="module-name"></h3>
+                                        <i class="more-button material-icons">more_horiz</i>
+                                    </header>
+                                    <div class="section-module__content"></div>
+                                </article>
+
+                                <article class="section-module section-module--size-2x1">
+                                    <header class="section-module__title-bar">
+                                        <h3 class="module-name"></h3>
+                                        <i class="more-button material-icons">more_horiz</i>
+                                    </header>
+                                    <div class="section-module__content"></div>
+                                </article>
+
+                                <article class="section-module section-module--size-2x1">
+                                        <header class="section-module__title-bar">
+                                            <h3 class="module-name"></h3>
+                                            <i class="more-button material-icons">more_horiz</i>
+                                        </header>
+                                        <div class="section-module__content"></div>
+                                    </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-cluster section-cluster--size-8x4">
+                        <article class="section-module section-module--size-4x4">
+                            <header class="section-module__title-bar">
+                                <h3 class="module-name">Informacje</h3>
+                                <i class="more-button material-icons">more_horiz</i>
+                            </header>
+                            <div class="section-module__content"></div>
+                        </article>
+                        <div class="section-cluster section-cluster--size-4x4">
+                            <article class="section-module section-module--size-4x2">
+                                <header class="section-module__title-bar">
+                                    <h3 class="module-name">Aktualności</h3>
+                                    <i class="more-button material-icons">more_horiz</i>
+                                </header>
+                                <div class="section-module__content"></div>
+                            </article>
+                            <div class="section-cluster section-cluster--size-4x2">
+                                <article class="section-module section-module--size-2x2">
+                                    <header class="section-module__title-bar">
+                                        <h3 class="module-name"></h3>
+                                        <i class="more-button material-icons">more_horiz</i>
+                                    </header>
+                                    <div class="section-module__content"></div>
+                                </article>
+
+                                <article class="section-module section-module--size-2x1">
+                                    <header class="section-module__title-bar">
+                                        <h3 class="module-name"></h3>
+                                        <i class="more-button material-icons">more_horiz</i>
+                                    </header>
+                                    <div class="section-module__content"></div>
+                                </article>
+
+                                <article class="section-module section-module--size-2x1">
+                                        <header class="section-module__title-bar">
+                                            <h3 class="module-name"></h3>
+                                            <i class="more-button material-icons">more_horiz</i>
+                                        </header>
+                                        <div class="section-module__content"></div>
+                                    </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="FooterWrap">
+                <footer class="main-footer">
+                    <p class="main-footer__copyright">Copyright &copy; 2018 Darciarz.pl<br> All rights reserved.</p>
+                </footer>
+            </div>
+
+        </main>
+
+        <div id="RightPanel">
+            <div class="toolbar-path-ext"></div>
+            <aside class="toolbar">
+                <div class="toolbar__module toolbar__module--h100"></div>
+                <div class="toolbar__module toolbar__module--h50"></div>
+                <div class="toolbar__module toolbar__module--h100"></div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="dist/js/jquery.js"></script>
+    <script src="dist/js/what-input.js"></script>
+    <script src="dist/js/foundation.min.js"></script>
+    <script src="dist/js/bundle.js"></script>
+</body>
+</html>

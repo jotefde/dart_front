@@ -1,0 +1,29 @@
+
+.logo{
+	@include xy-cell(2, $gutters: 0);
+	text-align: center;
+	line-height: 60px;
+}
+.toolbar-ext{
+	@include xy-cell(2, $gutters: 0);
+	// background: $color-theme-dark;
+	height: 60px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 5px 15px 5px 5px;
+	div{
+		text-align: center;
+		color: $color-text-distinct;
+		&:first-child{
+			margin-left:10px;
+		}
+		&:last-child{
+			*{color:$color-text-warning;}
+		}
+			p{
+				margin-bottom: 0;
+			}
+	}
+}

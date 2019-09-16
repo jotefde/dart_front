@@ -1,0 +1,31 @@
+$color-text-primary: #e7e7de;
+$color-text-secondary: #c6c6be;
+$color-text-alternate: #c7d6de;
+$color-text-distinct: #fff;
+$color-text-heading: #6389ad;
+$color-text-warning: #ab2121;
+
+$color-theme-primary: #00587a;
+$color-theme-secondary: #0f3057;
+
+
+$color-theme-alternate: darken($color-theme-primary, 10%);
+$color-theme-dark: darken($color-theme-primary, 15%);
+
+$color-bg-primary: #e7e7de;
+$color-bg-secondary: #d1d2cc;
+$color-bg-darken: darken($color-bg-secondary, 10%);
+$color-bg-footer: #fff5ce;
+
+$color-border-primary: #081623;
+$color-border-secondary: #c7d6de;
+
+$color-menu-link: $color-text-alternate;
+$color-menu-active: rgba(#c9d5db, 0.5);
+$color-menu-hover: rgba($color-menu-active, 0.4);
+$color-menu-active-link: $color-theme-secondary;
+$color-menu-active-sublink: $color-text-heading;
+
+
+$color-shadow-dark: rgba(#1e1e1e, 0.7);
+$color-shadow-light: rgba(#e3e3db, 0.7);

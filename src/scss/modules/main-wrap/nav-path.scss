@@ -1,0 +1,27 @@
+.path-icon {
+    padding: 0 5px;
+    font-size: 1.7em;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.3em;
+    li {
+        position: relative;
+        display: inline-flex;
+        text-transform: uppercase;
+        // a {
+        //     color: $color-text-primary;
+        // }
+        &:first-child {
+            transform: translateY(-0.15em);
+        }
+        &:not(:first-child)::before {
+            content: '/';
+            margin: 0 4px 0 2px;
+            color: #9c5252;
+            font-size: 1.3em;
+        }
+    }
+}

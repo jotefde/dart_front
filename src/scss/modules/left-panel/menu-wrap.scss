@@ -1,0 +1,126 @@
+.menu {
+    position: relative;
+    margin: 0;
+    .submenu {
+        list-style: none;
+        margin: 0;
+        padding-top: 5px;
+        height: 0px;
+        overflow: hidden;
+        .subitem {
+            line-height: 26px;
+            padding-left: 10px;
+            @include transition;
+            &__link {
+                display: block;
+                height: 100%;
+                width: 100%;
+                color: $color-menu-link;
+                @include transition;
+                &::before {
+                    content: " - ";
+                    display: inline;
+
+                }
+            }
+            &:hover, &--visited {
+                padding-left: 15px;
+                .subitem__link {
+                    color: $color-menu-active-sublink;
+                }
+            }
+        }
+    }
+
+    &__item {
+        height: 30px;
+        .item-label {
+            position: relative;
+            display: block;
+            width: calc(100% + 20px);
+            cursor: pointer;
+            transform: translateX(-10px);
+            height: 30px;
+            padding-top: 10px;
+            padding-left: 10px;
+            @include transition;
+
+            &:hover {
+                color: $color-menu-active-link;
+                background: $color-menu-hover;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 80%;
+                height: 30px;
+                top: 0px;
+                @include underline-secondary;
+                @include transition;
+            }
+
+            &:hover::before {
+                transform: translateX(-10px);
+                width: 100%;
+            }
+
+            &__link {
+                @include vertical-center;
+                left: 40px;
+                color: $color-menu-link;
+                @include transition(0.4s);
+            }
+
+            &__expand {
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: $color-menu-link;
+            }
+
+            &__icon {
+                @include vertical-center;
+                color: $color-menu-link;
+                @include transition(0.4s);
+            }
+
+            &:hover>.item-label__link,
+            &:hover>.item-label__icon {
+                color: $color-menu-active-link;
+            }
+        }
+
+        &--expanded {
+            height: auto;
+            .menu__item {
+                height: auto;
+            }
+            .submenu {
+                height: auto;
+                overflow: initial;
+            }
+        }
+
+        &--visited {
+            .item-label {
+                color: $color-menu-active-link;
+                background: $color-menu-active;
+
+                &::before {
+                    transform: translateX(-10px);
+                    width: 100%;
+                }
+
+                &__link,
+                &__icon,
+                &__expand {
+                    color: $color-menu-active-link;
+                }
+            }
+        }
+
+    }
+}

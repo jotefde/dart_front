@@ -1,0 +1,87 @@
+.main_section {
+  position: relative;
+  width: calc(100% + #{$main_section_scrollbar-width});
+  height: $main_section-height;
+  overflow: hidden;
+  .viewBox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+  }
+  // scrollbar background
+  &::before {
+    content: '';
+    width: $main_section_scrollbar-width;
+    height: 100%;
+    position: absolute;
+      top: 0;
+      right: 0;
+    background: $color-bg-primary;
+  }
+  .scrollbar {
+    padding: 0 2px;
+    position: absolute;
+      top: 0;
+      right: 0;
+    width: $main_section_scrollbar-width;
+    height: 100%;
+    z-index: 3;
+    // @include transition;
+    &:hover {
+      background: rgba($color-text-alternate, 0.8);
+    }
+    &__slider {
+      width: 100%;
+      height: 100%;
+      background: $color-text-heading;
+      box-shadow: 0 0 2px 0 $color-theme-dark;
+      border-radius: 50px;
+      cursor: pointer;
+    }
+  }
+  // bottom shadow
+  &::after {
+    content: '';
+    position: absolute;
+      bottom: 0;
+      left: 0;
+    width: 100%;
+    height: 20px;
+    box-shadow: inset 0px -20px 10px -20px $color-bg-primary,
+                inset 0px -20px 15px -20px rgba(0, 0, 0, 0.8);
+  }
+  .section-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    &--size-8x4 {
+      @include section-cluser-size(8,4);
+    }
+    &--size-4x4 {
+      @include section-cluser-size(4,4);
+    }
+    &--size-4x2 {
+      @include section-cluser-size(4,2);
+    }
+  }
+  .section-module {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+                0 3px 6px rgba(0,0,0,0.23);
+    background: $color-theme-primary;
+    margin: map-get($grid-padding-gutters, small) / 2;
+    &--size-4x4 {
+      @include section-module-size(4, 4);
+    }
+    &--size-4x2 {
+      @include section-module-size(4, 2);
+    }
+    &--size-2x2 {
+      @include section-module-size(2, 2);
+    }
+    &--size-2x1 {
+      @include section-module-size(2, 1);
+    }
+  }
+}

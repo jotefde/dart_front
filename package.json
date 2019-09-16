@@ -1,0 +1,35 @@
+{
+  "name": "dart_front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/js/bundle.js",
+  "scripts": {
+    "build-light": "webpack --config build-light.config.js",
+    "build-alert": "webpack --config build-alert.config.js",
+    "ftp-download": "node sync local darciarz.pl /var/www/dart_front",
+    "ftp-upload": "node sync remote darciarz.pl /var/www/dart_front"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "change-file-time": "^0.1.0",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0",
+    "ssh2": "^0.6.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {}
+}

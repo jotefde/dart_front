@@ -1,0 +1,33 @@
+// zmienne tekst
+$font-size-basic: 16px;
+$font-size-h1: 2*$font-size-basic;
+$font-size-h2: 1.5*$font-size-basic;
+$font-size-h3: 1.17*$font-size-basic;
+
+$font-line-height: 24px;
+$paragraph-margin: 0 0 15px;
+
+// Mixin naglowki
+@mixin header($header-font-size, $header-margin, $header-color: $header-color) {
+	font-size: $header-font-size;
+	margin: $header-margin;
+	color: $header-color;
+	font-weight: 400;
+}
+
+// font font
+$font-family-primary: "Open Sans", sans-serif;
+$font-family-secondary: "Lato", sans-serif;
+
+
+// style tekstu
+body {
+	font-size: $font-size-basic;
+	font-family: $font-family-primary;
+	color: $color-text-primary;
+}
+
+p {
+	margin: $paragraph-margin;
+	line-height: $font-line-height;
+}

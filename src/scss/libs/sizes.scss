@@ -1,0 +1,6 @@
+$header-height: 60px;
+$wrappers-height: calc(100vh - #{$header-height});
+$footer-height: 50px;
+$navpath-height: 30px;
+$main_section-height: calc(100% - #{$footer-height + $navpath-height});
+$main_section_scrollbar-width: calc(#{map-get($grid-column-gutter, small)} / 2);

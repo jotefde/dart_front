@@ -1,0 +1,17 @@
+.partner {
+    @include full-width;
+    padding: 8px 0;
+    @include transition(0.4s);
+    &__link {
+        display: block;
+        text-align: center;
+    }
+    &__image {
+        max-width: 70%;
+        max-height: 70%;
+    }
+    &:hover {
+        opacity: 0.8;
+        background: rgba($color-theme-primary, 0.2);
+    }
+}

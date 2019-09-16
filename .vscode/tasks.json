@@ -1,0 +1,31 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Webpack Compiler",
+            "type": "npm",
+            "script": "build-light",
+            "group": "build"
+        },
+        {
+            "label": "Webpack Compiler",
+            "type": "npm",
+            "script": "build-alert",
+            "group": "build"
+        },
+        {
+            "label": "FTPSync Upload",
+            "type": "npm",
+            "script": "ftp-upload",
+            "group": "test"
+        },
+        {
+            "label": "FTPSync Download",
+            "type": "npm",
+            "script": "ftp-download",
+            "group": "test"
+        }
+    ]
+}

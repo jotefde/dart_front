@@ -1,0 +1,109 @@
+@import 'libs/reset';
+@import 'libs/foundation/foundation';
+@import 'libs/colors';
+@import 'libs/sizes';
+@import 'libs/typography';
+@import 'libs/mixins';
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+
+@include foundation-xy-grid-classes();
+
+* {
+    box-sizing: border-box;
+}
+
+#HeaderWrap {
+  display: none;
+  @include breakpoint(medium){
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: $color-theme-alternate;
+    @include xy-grid-container(100vw, 0);
+    justify-content: space-between;
+    align-items: stretch;
+    // box-shadow: 0 1px 1px $color-shadow-dark;
+  }
+  @import 'modules/header-wrap.scss';
+}
+// CHUJ CI W DUPE FRYDRYK jeszcze raz i jeszcze raz kurwa ostatni
+#Wrappers {
+  @include xy-grid-container(100vw, 0);
+  display: flex;
+  flex-wrap: nowrap;
+  max-height: $wrappers-height;
+  min-height: $wrappers-height;
+}
+
+#LeftPanel {
+  @include xy-cell(2, $gutters: $grid-padding-gutters, $gutter-type: padding);
+  background: $color-theme-secondary;
+  height: $wrappers-height;
+  padding-top: 15px;
+  .section {
+    padding-bottom: 20px;
+    &__title {
+      @include header($font-size-h2, 0, $color-text-heading);
+    }
+  }
+}
+
+#MenuWrap {
+  @import 'modules/left-panel/menu-wrap.scss';
+}
+
+#Partnership {
+  margin: 0;
+  padding-top: 15px;
+  @import 'modules/left-panel/partnership.scss';
+}
+
+#MainWrap {
+  @include xy-cell(8, $gutters: 0);
+  position: relative;
+  height: $wrappers-height;
+  background: $color-bg-primary;
+  @import 'modules/main-wrap/main-section.scss';
+}
+
+#NavPath {
+  width: calc(100% + #{$main_section_scrollbar-width});
+  height: $navpath-height; //to do ustalenia, zależy od wyświetlanina i paddingow, set as you wish :)
+  background: $color-bg-darken; // można dać margin -10px jak na dole i szerokość zwiększyć, wtedy tło będzie na całego .main_section
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.7em;
+  @import 'modules/main-wrap/nav-path.scss';
+}
+
+#FooterWrap {
+  width: calc(100% + #{$main_section_scrollbar-width});
+  height: $footer-height;
+  text-align: center;
+  position: absolute;
+  z-index: 3;
+  background: $color-bg-primary;
+  overflow-x: hidden;
+  @import 'modules/main-wrap/footer-wrap.scss';
+}
+
+#RightPanel {
+  position: relative;
+  @include xy-cell(2, $gutters: 0);
+  margin-left: $main_section_scrollbar-width;
+  height: $wrappers-height;
+  background: $color-bg-secondary;
+  @import 'modules/right-panel.scss';
+}

@@ -1,0 +1,51 @@
+// Domieszki
+
+@mixin centered{
+	text-align: center;
+	position: absolute;
+		top: 50%;
+		left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin underline-primary{
+	border: none;
+	border-bottom: 1px solid $color-border-primary;
+}
+
+@mixin underline-secondary{
+	border: none;
+	border-bottom: 1px solid $color-border-secondary;
+}
+
+@mixin transition($_time: 0.2s) {
+	transition: all $_time ease-in-out;
+}
+
+@mixin reset-margin{
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+@mixin full-width {
+	width: calc(100% + #{map-get($grid-column-gutter, small)});
+	margin-left: calc(-#{map-get($grid-column-gutter, small) / 2});
+}
+
+@mixin section-module-size($width, $height) {
+	// @include xy-cell($width of 8, 0, $gutter-type: margin);
+	$w-prop: 8 / $width;
+	$h-prop: 8 / $height;
+	// - (#{map-get($grid-padding-gutters, small)} * 1.5)
+	width: calc((100vw - (100vw / 3)) / #{$w-prop} - #{map-get($grid-padding-gutters, small)});
+	height: calc((100vw - (100vw / 3)) / #{$h-prop} - #{map-get($grid-padding-gutters, small)});
+}
+
+@mixin section-cluser-size($width, $height) {
+	$w-prop: 8 / $width;
+	$h-prop: 8 / $height;
+	width: calc((100vw - (100vw / 3)) / #{$w-prop});
+	height: calc((100vw - (100vw / 3)) / #{$h-prop});
+}
